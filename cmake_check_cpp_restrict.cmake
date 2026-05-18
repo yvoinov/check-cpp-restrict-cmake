@@ -3,7 +3,7 @@ include(CheckCXXSourceCompiles)
 
 function(check_cpp_restrict)
 
-  set(CPP_RESTRICT "")
+  set(cpp_restrict_keyword "")
 
   foreach(cxx_kw __restrict__ __restrict)
 
@@ -27,12 +27,12 @@ function(check_cpp_restrict)
     )
 
     if(CXX_RESTRICT_${cxx_kw})
-      set(CPP_RESTRICT "${cxx_kw}")
+      set(cpp_restrict_keyword "${cxx_kw}")
       break()
     endif()
 
   endforeach()
 
-  set(CPP_RESTRICT "${CPP_RESTRICT}" PARENT_SCOPE)
+  set(CPP_RESTRICT "${cpp_restrict_keyword}" PARENT_SCOPE)
 
 endfunction()
