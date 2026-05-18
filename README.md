@@ -13,6 +13,18 @@ To use, add include to CMakeLists.txt before targets as shown below (an example)
 
 ```sh
 include(cmake_check_cpp_restrict.cmake)
+
+check_cpp_restrict()
+
+if(CPP_RESTRICT)
+  add_compile_definitions(
+    CPP_RESTRICT=${CPP_RESTRICT}
+  )
+else()
+  add_compile_definitions(
+    CPP_RESTRICT=
+  )
+endif()
 ```
 Then the macro is simply inserted into the code (example):
 
