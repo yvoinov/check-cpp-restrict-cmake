@@ -9,7 +9,7 @@ This CMake module is designed to correct this obvious defect.
 
 Based on [this module](https://github.com/yvoinov/check-cpp-restrict) the similar solution was written for CMake.
 
-To use, add include to CMakeLists.txt before targets as shown below (an example):
+To use, add include to CMakeLists.txt before targets as shown below (an example) then call function and check result:
 
 ```sh
 include(cmake_check_cpp_restrict.cmake)
